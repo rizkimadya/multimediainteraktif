@@ -61,7 +61,7 @@
               <ul class="navbar-nav">
                  <li class="nav-item mb-2">
                      <a class="nav-link {{ $title == "Dashboard" ? "active" : "" }}" href="#">
-                         <i class="ni ni-tv-2 text-primary"></i> Dashboard
+                         <i class="ni ni-tv-2 text-primary mb-1"></i> Dashboard
                      </a>
                  </li>
                  <li class="nav-item mb-2">
@@ -70,23 +70,23 @@
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link" href="#">
+                     <a class="nav-link {{ $title == "Video Materi" ? "active" : "" }}" href="#">
                          <i class="ni ni-camera-compact text-warning mb-1"></i> Video
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link" href="#">
+                     <a class="nav-link {{ $title == "Evaluasi Materi" ? "active" : "" }}" href="#">
                          <i class="ni ni-chart-pie-35 text-yellow mb-1"></i> Evaluasi
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link" href="#">
+                     <a class="nav-link {{ $title == "Daftar Pustaka" ? "active" : "" }}" href="#">
                          <i class="ni ni-single-copy-04 mb-1 text-info"></i> Daftar Pustaka
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link" href="#">
-                         <i class="ni ni-single-02 mb-1 text-success"></i> Data User
+                     <a class="nav-link {{ $title == "Data Guru" ? "active" : "" }}" href="#">
+                         <i class="ni ni-single-02 mb-1 text-success"></i> Data Guru
                      </a>
                  </li>
              </ul>

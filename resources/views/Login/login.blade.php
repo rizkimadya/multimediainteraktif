@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kejaksaan Luwu Timur | Login</title>
+    <title>Multimedia Interaktif | Login</title>
     <link rel="shortcut icon" href="{{ asset('assets/img/logo.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -19,8 +19,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mx-auto mt-2">
-                    <div class="card p-4 border-0">
-                        <p class="text-center fs-3 fw-semibold">Silahkan Login</p>
+                    <div class="card px-5 py-4 border-0">
+                        <p class="text-center fs-3 fw-semibold title mb-0">Silahkan Login</p>
+                        <p class="text-center subtitle">Multimedia Interaktif
+                            Pembelajaran Biologi <br> Materi Sistem Pernapasan </p>
                         @if (session('success'))
                             <p class="alert alert-success">{{ session('success') }}</p>
                         @endif
@@ -35,7 +37,7 @@
                         <form action="" method="POST">
                             @csrf
                             <div class="mb-3">
-                                <label for="" class="form-label">Username</label>
+                                <label for="username" class="form-label">Username</label>
                                 <input type="text" name="username" id="username"
                                     class="border-0 py-3 ps-4 form-control" placeholder="Masukkan Username">
                             </div>

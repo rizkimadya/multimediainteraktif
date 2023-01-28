@@ -15,8 +15,11 @@
     background-color: rgba(255, 255, 255, 0.6);
     margin-top: 25%;
 }
-#login p {
+#login .title {
     color: #079dac;
+}
+#login .subtitle {
+    color: #737373;
 }
 #login .btn-cyan {
     background-color: #079dac;
