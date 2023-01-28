@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    font-family: Poppins;
+}
+
+#login {
+    background-image: url("../img/bglogin.svg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#login .card {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 25%;
+}
+#login p {
+    color: #079dac;
+}
+#login .btn-cyan {
+    background-color: #079dac;
+    color: #fff;
+    font-weight: bold;
+    transition: all ease-in-out 0.4s;
+}
+#login .btn-cyan:hover {
+    transition: all ease-in-out 0.4s;
+    background-color: #1ccde1;
+    color: #fff;
+    font-weight: bold;
+}
