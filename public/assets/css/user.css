@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    font-family: Poppins;
+}
+.navbar {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 8px 0px;
+}
+.navbar-brand {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #1ccde1;
+}
+.navbar-brand span {
+    color: #f05562;
+}
+.navbar-brand p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #2b2b2b;
+}
+.navbar ul {
+    gap: 30px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #75808e;
+    font-weight: 500;
+    transition: all ease-in-out 0.3s;
+}
+.navbar ul li a:hover {
+    transition: all ease-in-out 0.3s;
+    color: #f05562;
+}
+.navbar ul li a.active {
+    color: #f05562;
+}
+footer {
+    background-color: #f05562;
+    padding: 50px 0px 30px 0px;
+}
+footer .card {
+    background-color: transparent;
+    border: none;
+}
+footer .title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #fff;
+}
+footer .isi {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #fff;
+}
+footer .isi a {
+    text-decoration: none;
+    margin-bottom: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #fff;
+}
+
+.main-content {
+    padding-top: 80px;
+}
+
+#beranda {
+    margin-top: 5%;
+}
+#beranda .hero .title {
+    color: #434343;
+    font-size: 42px;
+    line-height: 56px;
+    font-weight: 600;
+}
+#beranda .hero .title span {
+    color: #1ccde1;
+}
+#beranda .hero .subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #999898;
+    margin: 20px 0px 50px 0px;
+}
+#beranda .hero .btn-mulai {
+    background-color: #1ccde1;
+    padding: 17px 36px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+}
+#beranda .fitur {
+    margin-top: 10%;
+}
+#beranda .fitur p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+#beranda .sistempernapasan {
+    margin: 70px 0px;
+}
+#beranda .sistempernapasan .title {
+    font-size: 30px;
+    font-weight: 600;
+}
+#beranda .sistempernapasan .subtitle {
+    font-size: 18px;
+    font-weight: 400;
+}
+#beranda .sistempernapasan .card {
+    background-color: #1ccde1;
+    border: none;
+    padding: 20px 40px 34px 40px;
+    border-radius: 8px;
+}
+#beranda .sistempernapasan .card .btn-sistem {
+    background-color: #fff;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #434343;
+    font-weight: 600;
+    line-height: 36px;
+}
