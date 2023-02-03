@@ -52,6 +52,6 @@
             </div>
         </div>
         <hr style="color:#fff;">
-        <p class="text-white text-center">Multimedia Interaktif | Januari 2023</p>
+        <p class="text-white text-center copyright">Multimedia Interaktif | Januari 2023</p>
     </div>
 </footer>

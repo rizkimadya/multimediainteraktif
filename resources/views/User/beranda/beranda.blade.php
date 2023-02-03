@@ -4,7 +4,7 @@
     <section id="beranda">
         <div class="container">
             <div class="row hero">
-                <div class="col-md-6 align-self-center">
+                <div class="col-md-6 align-self-center order-md-1 order-2">
                     <p class="title"><span>Selamat</span> Datang, <br>
                         dan Selamat <span>Belajar</span></p>
                     <p class="subtitle">Pembelajaran tidak didapat secara kebetulan, ia harus dicari dengan semangat dan
@@ -14,7 +14,7 @@
                         <a href="" class="btn btn-mulai d-flex">Mulai Belajar <i class="bi bi-book ms-2"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 order-md-2 order-1">
                     <img src="{{ asset('assets/img/bghero.svg') }}" alt="" width="100%">
                 </div>
             </div>
