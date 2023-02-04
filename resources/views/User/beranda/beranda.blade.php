@@ -11,7 +11,7 @@
                         dijalani dengan tekun.
                     </p>
                     <div class="d-inline-block">
-                        <a href="" class="btn btn-mulai d-flex">Mulai Belajar <i class="bi bi-book ms-2"></i></a>
+                        <a href="#cardmateri" class="btn btn-mulai d-flex">Mulai Belajar <i class="bi bi-book ms-2"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-2 order-1">
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <div class="row sistempernapasan">
+            <div class="row sistempernapasan" id="cardmateri">
                 <div class="col-12">
                     <p class="title mb-0">Sistem Pernapasan</p>
                     <p class="subtitle">Media Pembelajaran Interaktif</p>
@@ -54,19 +54,19 @@
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="{{ asset('assets/img/book.svg') }}" alt="" width="100%" height="300px">
-                        <a href="#" class="btn btn-sistem">Materi</a>
+                        <a href="/materi" class="btn btn-sistem">Materi</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="{{ asset('assets/img/video.svg') }}" alt="" width="100%" height="300px">
-                        <a href="#" class="btn btn-sistem">Video</a>
+                        <a href="/video" class="btn btn-sistem">Video</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="{{ asset('assets/img/file.svg') }}" alt="" width="100%" height="300px">
-                        <a href="#" class="btn btn-sistem">Evaluasi</a>
+                        <a href="/evaluasi" class="btn btn-sistem">Evaluasi</a>
                     </div>
                 </div>
             </div>

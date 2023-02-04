@@ -21,7 +21,7 @@
     <div class="isimateri">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-6 mb-3">
+                <div class="col-md-4 col-6 mb-md-4 mb-3">
                     <div class="card">
                         <img src="{{ asset('assets/img/imgmateri.svg') }}" alt="" width="100%">
                         <div class="text-center">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-6 mb-3">
+                <div class="col-md-4 col-6 mb-md-4 mb-3">
                     <div class="card">
                         <img src="{{ asset('assets/img/imgmateri.svg') }}" alt="" width="100%">
                         <div class="text-center">
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-6 mb-3">
+                <div class="col-md-4 col-6 mb-md-4 mb-3">
                     <div class="card">
                         <img src="{{ asset('assets/img/imgmateri.svg') }}" alt="" width="100%">
                         <div class="text-center">

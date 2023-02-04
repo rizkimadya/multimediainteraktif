@@ -45,7 +45,8 @@
                                 </p>
                             </div>
                             <div class="mt-3">
-                                <a href="#" class="btn btn-lokasi">Lihat Lokasi</a>
+                                <a href="https://goo.gl/maps/GbPb41VhroTBC5wm8" target="_blank" class="btn btn-lokasi">Lihat
+                                    Lokasi</a>
                             </div>
                         </div>
                     </div>
@@ -62,7 +63,8 @@
                                 </p>
                             </div>
                             <div class="mt-3">
-                                <a href="#" class="btn btn-lokasi">Lihat Lokasi</a>
+                                <a href="https://goo.gl/maps/cVRCmVF76GABVGeb8" target="_blank" class="btn btn-lokasi">Lihat
+                                    Lokasi</a>
                             </div>
                         </div>
                     </div>

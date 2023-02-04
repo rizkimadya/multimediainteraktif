@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             Multimedia <span>Interaktif</span>
             <p class="mb-0">
                 Pembelajaran materi sistem pernapasan
