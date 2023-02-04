@@ -69,6 +69,7 @@ footer .isi a {
 
 .main-content {
     padding-top: 80px;
+    background-color: #f8fafb;
 }
 
 #beranda {
@@ -181,7 +182,7 @@ footer .isi a {
 #dapus {
     margin-top: -4px;
     padding: 60px 0px;
-    background-color: #1ccde1;
+    background: linear-gradient(180deg, #0460b4 0%, #00e5ff 100%);
 }
 #dapus .title {
     color: #fff;
@@ -213,7 +214,7 @@ footer .isi a {
 #video {
     margin-top: -4px;
     padding: 60px 0px;
-    background-color: #1ccde1;
+    background: linear-gradient(180deg, #0460b4 0%, #00e5ff 100%);
 }
 #video .title {
     color: #fff;
@@ -223,7 +224,7 @@ footer .isi a {
     margin-bottom: 14px;
 }
 #video .title span {
-    color: #4a517a;
+    color: #373737;
 }
 #video .subtitle {
     color: #fdfdfd;
@@ -263,6 +264,69 @@ footer .isi a {
 }
 .isi-video .card iframe {
     height: 315px;
+}
+
+#materi {
+    margin-top: -6px;
+    padding: 60px 0px;
+    background: linear-gradient(180deg, #0460b4 0%, #00e5ff 100%);
+}
+#materi .title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #fff;
+}
+#materi .subtitle {
+    font-size: 16px;
+    padding: 0px 100px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 24px;
+    color: #fff;
+}
+#materi img {
+    width: 476px;
+}
+#materi input {
+    background-color: #fff;
+    border: none;
+    padding: 12px 110px 10px 30px;
+    width: 60%;
+    border-radius: 30px 4px 4px 30px;
+}
+#materi .bi {
+    border-radius: 4px 30px 30px 4px;
+    color: #000;
+    padding: 14px;
+    background-color: #fff;
+}
+.isimateri {
+    padding: 50px 0px 90px 0px;
+}
+.isimateri .card {
+    padding: 20px;
+    border: none;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+.isimateri .card .namamateri {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0px 5px 0px;
+    color: #2b2b2b;
+}
+.isimateri .card .deskripsimateri {
+    color: #2b2b2b;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+.isimateri .card a {
+    text-decoration: none;
+    color: #1ccde1;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 @media (max-width: 575.98px) {
@@ -461,5 +525,59 @@ footer .isi a {
     }
     .isi-video .card iframe {
         height: 140px;
+    }
+    #materi {
+        margin-top: -30px;
+        padding: 50px 0px;
+    }
+    #materi .title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: #fff;
+    }
+    #materi .subtitle {
+        font-size: 12px;
+        font-weight: 400;
+        padding: 0px 20px;
+        line-height: 20px;
+    }
+    #materi img {
+        width: 300px;
+    }
+    #materi input {
+        padding: 8px 10px 10px 20px;
+        width: 76%;
+        border-radius: 30px 4px 4px 30px;
+    }
+    #materi .bi {
+        border-radius: 4px 30px 30px 4px;
+        color: #000;
+        padding: 14px;
+        background-color: #fff;
+    }
+    .isimateri {
+        padding: 20px 0px 40px 0px;
+    }
+    .isimateri .card {
+        padding: 10px 0px;
+    }
+    .isimateri .card .namamateri {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 20px 0px 5px 0px;
+        color: #2b2b2b;
+    }
+    .isimateri .card .deskripsimateri {
+        color: #2b2b2b;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+    .isimateri .card a {
+        text-decoration: none;
+        color: #1ccde1;
+        font-size: 14px;
+        font-weight: 500;
     }
 }

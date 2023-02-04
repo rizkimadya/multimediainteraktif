@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 order-md-2 order-1">
-                    <img src="{{ asset('assets/img/bghero.svg') }}" alt="" width="100%">
+                    <img src="{{ asset('assets/img/bghero.png') }}" alt="" width="100%">
                 </div>
             </div>
 
