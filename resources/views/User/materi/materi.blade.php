@@ -27,7 +27,7 @@
                         <div class="text-center">
                             <p class="namamateri">Materi Trakea</p>
                             <p class="deskripsimateri">Trakea atau batang kerongkongan adalah sfj gdr fh dan.....</p>
-                            <a href="" class="d-flex justify-content-center">Lihat Materi <i class="bi bi-arrow-right ms-1"></i></a>
+                            <a href="/detailmateri" class="d-flex justify-content-center">Lihat Materi <i class="bi bi-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <div class="text-center">
                             <p class="namamateri">Materi Trakea</p>
                             <p class="deskripsimateri">Trakea atau batang kerongkongan adalah sfj gdr fh dan.....</p>
-                            <a href="" class="d-flex justify-content-center">Lihat Materi <i class="bi bi-arrow-right ms-1"></i></a>
+                            <a href="/detailmateri" class="d-flex justify-content-center">Lihat Materi <i class="bi bi-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         <div class="text-center">
                             <p class="namamateri">Materi Trakea</p>
                             <p class="deskripsimateri">Trakea atau batang kerongkongan adalah sfj gdr fh dan.....</p>
-                            <a href="" class="d-flex justify-content-center">Lihat Materi <i class="bi bi-arrow-right ms-1"></i></a>
+                            <a href="/detailmateri" class="d-flex justify-content-center">Lihat Materi <i class="bi bi-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>

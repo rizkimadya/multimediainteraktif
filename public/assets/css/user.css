@@ -328,6 +328,97 @@ footer .isi a {
     font-size: 16px;
     font-weight: 600;
 }
+#evaluasi {
+    padding: 50px 0px 100px 0px;
+}
+#evaluasi .title {
+    font-size: 32px;
+    margin-bottom: 0;
+    color: #4a517a;
+    font-weight: 600;
+}
+#evaluasi .subtitle {
+    font-size: 20px;
+    color: #75808e;
+    font-weight: 500;
+}
+#evaluasi .cardevaluasi {
+    margin-top: 50px;
+}
+#evaluasi .card {
+    border-radius: 12px;
+    text-decoration: none;
+    border: none;
+    padding: 14px 20px;
+    background: linear-gradient(
+        96.44deg,
+        #6772e5 3.31%,
+        #2ba4fb 50.56%,
+        #22e9ff 97.46%
+    );
+}
+#evaluasi .card .nama {
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-weight: 500;
+}
+#evaluasi .card .keterangan {
+    font-size: 14px;
+    font-weight: 400;
+}
+#evaluasi .card .jmlsoal {
+    font-size: 12px;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+#detailmateri {
+    padding: 30px 0px 100px 0px;
+}
+#detailmateri .title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #4a517a;
+    font-weight: 600;
+}
+#detailmateri .subtitle {
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 0px;
+}
+#detailmateri .isi img {
+    margin-bottom: 20px;
+    width: 70%;
+}
+#detailmateri .card {
+    padding: 20px;
+    border: none;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+#detailmateri .card .namamateri {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0px 5px 0px;
+    color: #2b2b2b;
+}
+#detailmateri .card .deskripsimateri {
+    color: #2b2b2b;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+#detailmateri .card a {
+    text-decoration: none;
+    color: #1ccde1;
+    font-size: 16px;
+    font-weight: 600;
+}
+#detailmateri .materilain {
+    height: 100vh;
+    padding-left: 60px;
+    overflow: auto;
+}
 
 @media (max-width: 575.98px) {
     .navbar-brand {
@@ -553,7 +644,7 @@ footer .isi a {
     #materi .bi {
         border-radius: 4px 30px 30px 4px;
         color: #000;
-        padding: 14px; 
+        padding: 14px;
         background-color: #fff;
     }
     .isimateri {
@@ -579,5 +670,64 @@ footer .isi a {
         color: #1ccde1;
         font-size: 14px;
         font-weight: 500;
+    }
+    #evaluasi {
+        padding: 20px 0px 60px 0px;
+    }
+    #evaluasi .title {
+        font-size: 24px;
+    }
+    #evaluasi .subtitle {
+        font-size: 14px;
+    }
+    #evaluasi .cardevaluasi {
+        margin-top: 10px;
+    }
+    #evaluasi .card .nama {
+        font-size: 18px;
+    }
+    #evaluasi .card .keterangan {
+        font-size: 12px;
+    }
+
+    #detailmateri {
+        padding: 10px 0px 60px 0px;
+    }
+    #detailmateri .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #4a517a;
+        font-weight: 600;
+    }
+    #detailmateri .subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+        text-align: justify;
+    }
+    #detailmateri .isi img {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    #detailmateri .card .namamateri {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 20px 0px 5px 0px;
+        color: #2b2b2b;
+    }
+    #detailmateri .card .deskripsimateri {
+        color: #2b2b2b;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+    #detailmateri .card a {
+        text-decoration: none;
+        color: #1ccde1;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    #detailmateri .materilain {
+        height: auto;
+        padding-left: 10px;
     }
 }

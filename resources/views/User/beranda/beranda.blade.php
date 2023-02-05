@@ -53,19 +53,19 @@
 
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{{ asset('assets/img/book.svg') }}" alt="" width="100%" height="300px">
+                        <img src="{{ asset('assets/img/books.png') }}" alt="" width="100%" height="300px">
                         <a href="/materi" class="btn btn-sistem">Materi</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{{ asset('assets/img/video.svg') }}" alt="" width="100%" height="300px">
+                        <img src="{{ asset('assets/img/video.png') }}" alt="" width="100%" height="300px">
                         <a href="/video" class="btn btn-sistem">Video</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{{ asset('assets/img/file.svg') }}" alt="" width="100%" height="300px">
+                        <img src="{{ asset('assets/img/file.png') }}" alt="" width="100%" height="300px">
                         <a href="/evaluasi" class="btn btn-sistem">Evaluasi</a>
                     </div>
                 </div>

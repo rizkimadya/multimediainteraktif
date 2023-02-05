@@ -16,13 +16,15 @@
                     <a class="{{ $title == 'Beranda' ? 'active' : '' }}" href="/">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="{{ $title == 'Materi' ? 'active' : '' }}" href="/materi">Materi</a>
+                    <a class="{{ ($title == 'Materi' ? 'active' : '' || $title == 'Detail Materi') ? 'active' : '' }}"
+                        href="/materi">Materi</a>
                 </li>
                 <li class="nav-item">
                     <a class="{{ $title == 'Video' ? 'active' : '' }}" href="/video">Video</a>
                 </li>
                 <li class="nav-item">
-                    <a class="{{ $title == 'Evaluasi' ? 'active' : '' }}" href="/evaluasi">Evaluasi</a>
+                    <a class="{{ ($title == 'Evaluasi' ? 'active' : '' || $title == 'Detail Evaluasi') ? 'active' : '' }}"
+                        href="/evaluasi">Evaluasi</a>
                 </li>
                 <li class="nav-item">
                     <a class="{{ $title == 'Daftar Pustaka' ? 'active' : '' }}" href="/daftarpustaka">Daftar Pustaka</a>

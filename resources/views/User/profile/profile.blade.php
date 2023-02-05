@@ -35,7 +35,7 @@
             <div class="row lokasi">
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('assets/img/imguin.svg') }}" alt="">
+                        <img src="{{ asset('assets/img/imguin.png') }}" alt="">
                         <div class="p-4">
                             <div class="d-flex">
                                 <i class="bi bi-geo-alt-fill fs-2 me-2 align-self-center"></i>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="{{ asset('assets/img/imgman.svg') }}" alt="">
+                        <img src="{{ asset('assets/img/imgman.png') }}" alt="">
                         <div class="p-4">
                             <div class="d-flex">
                                 <i class="bi bi-geo-alt-fill fs-2 me-2 align-self-center"></i>
