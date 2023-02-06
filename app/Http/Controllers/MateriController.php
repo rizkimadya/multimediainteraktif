@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Materi;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MateriController extends Controller
 {
@@ -25,7 +27,7 @@ class MateriController extends Controller
      */
     public function create()
     {
-        //
+        return view('Admin.Materi.create');
     }
 
     /**
@@ -36,7 +38,23 @@ class MateriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'nama_materi' => 'required',
+            'isi_materi' => 'required',
+            'gambar' => 'file|image|mimes:jpeg,png,jpg|max:5000'
+        ]);
+
+        $materi = new Materi();
+        $materi->fill($data);
+
+        $dir = 'Materi/' . $request->nama_materi;
+        $path = $request
+            ->file('gambar')
+            ->storePubliclyAs($dir, "gambar.{$request->file('gambar')->extension()}");
+        $materi->gambar = Str::of($path)->replace('public', 'storage')->toString();
+
+        $materi->save();
+        return redirect()->route('materi.index')->with('status', 'Data Berhasil Ditambah');
     }
 
     /**
@@ -45,9 +63,10 @@ class MateriController extends Controller
      * @param  \App\Models\Materi  $materi
      * @return \Illuminate\Http\Response
      */
-    public function show(Materi $materi)
+    public function show($id)
     {
-        //
+        $materi = Materi::find($id);
+        return view('Admin.Materi.show', ['materi' => $materi]);
     }
 
     /**
@@ -56,9 +75,10 @@ class MateriController extends Controller
      * @param  \App\Models\Materi  $materi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Materi $materi)
+    public function edit($id)
     {
-        //
+        $materi = Materi::where('id', $id)->first();
+        return view('Admin.Materi.edit', ['materi' => $materi]);
     }
 
     /**
@@ -68,9 +88,27 @@ class MateriController extends Controller
      * @param  \App\Models\Materi  $materi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Materi $materi)
+    public function update(Request $request, $id)
     {
-        //
+        $materi = Materi::where('id', $id)->first();
+        $data = $request->all();
+
+        if (!$request->file("gambar")) {
+            $materi->fill($data);
+            $materi->save();
+        }
+        if ($request->file("gambar")) {
+            $materi->fill($data);
+
+            $dir = 'Materi/' . $request->nama_materi;
+            $path = $request
+                ->file('gambar')
+                ->storePubliclyAs($dir, "gambar.{$request->file('gambar')->extension()}");
+            $materi->gambar = Str::of($path)->replace('public', 'storage')->toString();
+
+            $materi->save();
+        }
+        return redirect()->route('materi.index')->with('status', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -79,8 +117,11 @@ class MateriController extends Controller
      * @param  \App\Models\Materi  $materi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Materi $materi)
+    public function destroy($id)
     {
-        //
+        $materi = Materi::find($id);
+        Storage::delete(Str::of($materi->gambar)->replace('storage', 'public')->toString());
+        $materi->delete();
+        return redirect()->route('materi.index');
     }
 }

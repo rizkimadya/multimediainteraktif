@@ -16,7 +16,7 @@
                      aria-expanded="false">
                      <div class="media align-items-center">
                          <span class="avatar avatar-sm rounded-circle">
-                             <img alt="Image placeholder" src="./assets/img/theme/team-1-800x800.jpg">
+                             <img alt="Image placeholder" src="{{ asset('assets/assets/img/theme/team-1-800x800.jpg') }}">
                          </span>
                      </div>
                  </a>

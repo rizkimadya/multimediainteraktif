@@ -5,9 +5,9 @@
         <div class="col-12">
             <div class="card p-4">
                 <div>
-                    <button class="btn btn-primary d-flex">
+                    <a href="{{ route('materi.create') }}" class="btn btn-primary d-inline-block">
                         <i class="ni ni-fat-add align-self-center mr-1"></i>
-                        Tambah Materi</button>
+                        Tambah Materi</a>
                 </div>
                 <div class="table-responsive mt-4">
                     <table class="table align-items-center">
@@ -20,16 +20,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Materi Sistem Pernapasan</td>
-                                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit.....</td>
-                                <td class="d-flex">
-                                    <button class="btn btn-info mr-2">Lihat</button>
-                                    <button class="btn btn-success mr-2">Edit</button>
-                                    <button class="btn btn-danger">Hapus</button>
-                                </td>
-                            </tr>
+                            @foreach ($materi as $item)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $item->nama_materi }}</td>
+                                    <td>{{ Str::limit($item->isi_materi, 40) }}</td>
+                                    <td class="d-flex justify-content-center">
+                                        <a href="Materi/show/{{ $item->id }}" class="btn btn-info mr-2">Lihat</a>
+                                        <a href="Materi/edit/{{ $item->id }}" class="btn btn-success mr-2">Edit</a>
+
+                                        <form action="Materi/{{ $item->id }}" method="post">
+                                            {{ method_field('DELETE') }}
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-danger"
+                                                onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                Hapus
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -55,6 +55,12 @@ Route::namespace('App\Http\Controllers')->group(function () {
 
         // route materi
         Route::get('/Admin/Materi', 'MateriController@index')->name('materi.index');
+        Route::get('/Admin/Materi/create', 'MateriController@create')->name('materi.create');
+        Route::post('/Admin/Materi', 'MateriController@store')->name('materi.store');
+        Route::get('/Admin/Materi/edit/{id}', 'MateriController@edit')->name('materi.edit');
+        Route::get('/Admin/Materi/show/{id}', 'MateriController@show')->name('materi.show');
+        Route::post('/Admin/Materi/update/{id}', 'MateriController@update')->name('materi.update');
+        Route::delete('/Admin/Materi/{id}', 'MateriController@destroy')->name('materi.destroy');
 
 
         // route video
