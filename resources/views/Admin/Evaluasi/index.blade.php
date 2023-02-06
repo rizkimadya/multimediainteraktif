@@ -21,20 +21,31 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <form action="">
+                                <form action="/Admin/Evaluasi" method="POST">
+                                    @csrf
                                     <div class="mb-3">
-                                        <label for="linkevaluasi" class="form-label">Link Evaluasi Materi</label>
-                                        <input type="text" id="linkevaluasi" class="form-control" name="linkevaluasi"
-                                            placeholder="Masukkan Link Goggle Form">
+                                        <label for="keterangan" class="form-label">Keterangan Materi</label>
+                                        <input type="text" id="keterangan" class="form-control" name="keterangan"
+                                            placeholder="Masukkan Keterangan" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="keteranganmateri" class="form-label">Keterangan Materi</label>
-                                        <input type="text" id="keteranganmateri" class="form-control" name="keteranganmateri"
-                                            placeholder="Masukkan Keterangan">
+                                        <label for="nama_materi" class="form-label">Nama Materi</label>
+                                        <input type="text" id="nama_materi" class="form-control" name="nama_materi"
+                                            placeholder="Masukkan Nama Materi" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="jumlah_soal" class="form-label">Jumlah Soal</label>
+                                        <input type="number" id="jumlah_soal" class="form-control" name="jumlah_soal"
+                                            placeholder="Masukkan Jumlah Soal" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="link_soal" class="form-label">Link Soal</label>
+                                        <input type="text" id="link_soal" class="form-control" name="link_soal"
+                                            placeholder="Masukkan Link Soal" required>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Tambahkan</button>
+                                        <button type="submit" class="btn btn-primary">Tambahkan</button>
                                     </div>
                                 </form>
                             </div>
@@ -46,21 +57,36 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Link Goggle Form</th>
                                 <th>Keterangan</th>
-                                <th>Aksi</th>
+                                <th>Nama Materi</th>
+                                <th>Jumlah Soal</th>
+                                <th>Link Soal</th>
+                                <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>http://localhost:8000/</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
-                                <td class="d-flex">
-                                    <button class="btn btn-success mr-2">Edit</button>
-                                    <button class="btn btn-danger">Hapus</button>
-                                </td>
-                            </tr>
+                            @foreach ($evaluasi as $item)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ Str::limit($item->keterangan, 20) }}</td>
+                                    <td>{{ Str::limit($item->nama_materi, 20) }}</td>
+                                    <td>{{ $item->jumlah_soal }}</td>
+                                    <td>{{ Str::limit($item->link_soal, 20) }}</td>
+                                    <td class="d-flex justify-content-center">
+                                        <a href="Evaluasi/edit/{{ $item->id }}"
+                                            class="btn btn-sm btn-success mr-2">Edit</a>
+
+                                        <form action="Evaluasi/{{ $item->id }}" method="post">
+                                            {{ method_field('DELETE') }}
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                Hapus
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

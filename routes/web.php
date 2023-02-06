@@ -65,10 +65,18 @@ Route::namespace('App\Http\Controllers')->group(function () {
 
         // route video
         Route::get('/Admin/Video', 'VideoController@index')->name('video.index');
+        Route::post('/Admin/Video', 'VideoController@store');
+        Route::get('/Admin/Video/edit/{id}', 'VideoController@edit')->name('video.edit');
+        Route::post('Admin/Video/update/{id}', 'VideoController@update')->name('video.update');
+        Route::delete('/Admin/Video/{id}', 'VideoController@destroy')->name('video.destroy');
 
 
         // route evaluasi
         Route::get('/Admin/Evaluasi', 'EvaluasiController@index')->name('evaluasi.index');
+        Route::post('/Admin/Evaluasi', 'EvaluasiController@store');
+        Route::get('/Admin/Evaluasi/edit/{id}', 'EvaluasiController@edit')->name('materi.edit');
+        Route::post('Admin/Evaluasi/update/{id}', 'EvaluasiController@update')->name('evaluasi.update');
+        Route::delete('/Admin/Evaluasi/{id}', 'EvaluasiController@destroy')->name('evaluasi.destroy');
 
         // route daftar pustaka
         Route::get('/Admin/DaftarPustaka/index', 'DaftarPustakaController@index')->name('dapus.index');

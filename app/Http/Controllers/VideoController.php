@@ -18,15 +18,6 @@ class VideoController extends Controller
         return view('Admin.Video.index', ['video' => $video]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -36,29 +27,22 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'linkvideo' => 'required',
+            'keteranganvideo' => 'required'
+        ]);
+
+        $video = new Video();
+        $video->fill($data);
+        $video->save();
+        return redirect()->route('video.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Video  $video
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Video $video)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Video  $video
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Video $video)
+    public function edit($id)
     {
-        //
+        $video = Video::where('id', $id)->first();
+        return view('Admin.Video.edit', ['video' => $video]);
     }
 
     /**
@@ -68,9 +52,15 @@ class VideoController extends Controller
      * @param  \App\Models\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Video $video)
+    public function update(Request $request, $id)
     {
-        //
+        $video = Video::where('id', $id)->first();
+        $video->linkvideo = $request->linkvideo;
+        $video->keteranganvideo = $request->keteranganvideo;
+
+        $data = $video;
+        $data->update();
+        return redirect()->route('video.index');
     }
 
     /**
@@ -79,8 +69,10 @@ class VideoController extends Controller
      * @param  \App\Models\Video  $video
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Video $video)
+    public function destroy($id)
     {
-        //
+        $video = Video::find($id);
+        $video->delete();
+        return redirect()->route('video.index');
     }
 }

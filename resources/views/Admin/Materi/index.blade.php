@@ -24,15 +24,15 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->nama_materi }}</td>
-                                    <td>{{ Str::limit($item->isi_materi, 40) }}</td>
+                                    <td>{{ Str::limit($item->isi_materi, 70) }}</td>
                                     <td class="d-flex justify-content-center">
-                                        <a href="Materi/show/{{ $item->id }}" class="btn btn-info mr-2">Lihat</a>
-                                        <a href="Materi/edit/{{ $item->id }}" class="btn btn-success mr-2">Edit</a>
+                                        <a href="Materi/show/{{ $item->id }}" class="btn btn-sm btn-info mr-2">Lihat</a>
+                                        <a href="Materi/edit/{{ $item->id }}" class="btn btn-sm btn-success mr-2">Edit</a>
 
                                         <form action="Materi/{{ $item->id }}" method="post">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-danger"
+                                            <button type="submit" class="btn btn-sm btn-danger"
                                                 onclick="return confirm(&quot;Confirm delete?&quot;)">
                                                 Hapus
                                             </button>

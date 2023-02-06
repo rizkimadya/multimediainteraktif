@@ -21,7 +21,8 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <form action="">
+                                <form action="/Admin/Video" method="POST">
+                                    @csrf
                                     <div class="mb-3">
                                         <label for="linkvideo" class="form-label">Link Video</label>
                                         <input type="text" id="linkvideo" class="form-control" name="linkvideo"
@@ -34,7 +35,7 @@
                                     </div>
                                     <div class="mb-2 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Tambahkan</button>
+                                        <button type="submit" class="btn btn-primary">Tambahkan</button>
                                     </div>
                                 </form>
                             </div>
@@ -52,15 +53,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>http://localhost:8000/</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
-                                <td class="d-flex">
-                                    <button class="btn btn-success mr-2">Edit</button>
-                                    <button class="btn btn-danger">Hapus</button>
-                                </td>
-                            </tr>
+                            @foreach ($video as $item)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ Str::limit($item->linkvideo, 55) }}</td>
+                                    <td>{{ Str::limit($item->keteranganvideo, 30) }}</td>
+                                    <td class="d-flex">
+                                        <a href="Video/edit/{{ $item->id }}" class="btn btn-sm btn-success mr-2">Edit</a>
+
+                                        <form action="Video/{{ $item->id }}" method="post">
+                                            {{ method_field('DELETE') }}
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                Hapus
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
