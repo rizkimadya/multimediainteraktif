@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,9 +40,31 @@ Route::get('/profile', function () {
 });
 
 
-Route::get('/dashboard', function () {
-    return view('Admin.Dashboard.dashboard');
-});
-Route::get('/login', function () {
-    return view('Login.login');
+// login
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/dashboard', [LoginController::class, 'login_action'])->name('login.action');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+// admin
+Route::namespace('App\Http\Controllers')->group(function () {
+    Route::group(['middleware' => ['auth']], function () {
+        Route::get('/dashboard', function () {
+            return view('Admin.Dashboard.dashboard');
+        });
+
+        // route materi
+        Route::get('/Admin/Materi', 'MateriController@index')->name('materi.index');
+
+
+        // route video
+        Route::get('/Admin/Video', 'VideoController@index')->name('video.index');
+
+
+        // route evaluasi
+        Route::get('/Admin/Evaluasi', 'EvaluasiController@index')->name('evaluasi.index');
+
+        // route daftar pustaka
+        Route::get('/Admin/DaftarPustaka/index', 'DaftarPustakaController@index')->name('dapus.index');
+    });
 });

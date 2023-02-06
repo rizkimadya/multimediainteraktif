@@ -29,7 +29,7 @@
                          <span>Profile Saya</span>
                      </a>
                      <div class="dropdown-divider"></div>
-                     <a href="#!" class="dropdown-item">
+                     <a href="{{ route('logout') }}" class="dropdown-item">
                          <i class="ni ni-user-run"></i>
                          <span>Logout</span>
                      </a>
@@ -43,7 +43,8 @@
                  <div class="row">
                      <div class="col-6 collapse-brand">
                          <a href="#">
-                              <img src="{{ asset('assets/img/logodashboard.png') }}" class="navbar-brand-img" alt="...">
+                             <img src="{{ asset('assets/img/logodashboard.png') }}" class="navbar-brand-img"
+                                 alt="...">
                          </a>
                      </div>
                      <div class="col-6 collapse-close">
@@ -56,36 +57,39 @@
                      </div>
                  </div>
              </div>
-    
+
              <!-- Navigation -->
-              <ul class="navbar-nav">
+             <ul class="navbar-nav">
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == "Dashboard" ? "active" : "" }}" href="#">
+                     <a class="nav-link {{ $title == 'Dashboard' ? 'active' : '' }}" href="/dashboard">
                          <i class="ni ni-tv-2 text-primary mb-1"></i> Dashboard
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == "Materi" ? "active" : "" }}" href="#">
+                     <a class="nav-link {{ $title == 'Materi' ? 'active' : '' }}" href="{{ route('materi.index') }}">
                          <i class="fas fa-chart-bar text-danger"></i> Materi
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == "Video Materi" ? "active" : "" }}" href="#">
+                     <a class="nav-link {{ $title == 'Video Materi' ? 'active' : '' }}"
+                         href="{{ route('video.index') }}">
                          <i class="ni ni-camera-compact text-warning mb-1"></i> Video
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == "Evaluasi Materi" ? "active" : "" }}" href="#">
+                     <a class="nav-link {{ $title == 'Evaluasi Materi' ? 'active' : '' }}"
+                         href="{{ route('evaluasi.index') }}">
                          <i class="ni ni-chart-pie-35 text-yellow mb-1"></i> Evaluasi
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == "Daftar Pustaka" ? "active" : "" }}" href="#">
+                     <a class="nav-link {{ $title == 'Daftar Pustaka' ? 'active' : '' }}"
+                         href="{{ route('dapus.index') }}">
                          <i class="ni ni-single-copy-04 mb-1 text-info"></i> Daftar Pustaka
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == "Data Guru" ? "active" : "" }}" href="#">
+                     <a class="nav-link {{ $title == 'Data Guru' ? 'active' : '' }}" href="#">
                          <i class="ni ni-single-02 mb-1 text-success"></i> Data Guru
                      </a>
                  </li>

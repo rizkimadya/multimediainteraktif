@@ -7,7 +7,7 @@
                 <div>
                     <button class="btn btn-primary d-flex" data-toggle="modal" data-target="#exampleModal">
                         <i class="ni ni-fat-add align-self-center mr-1"></i>
-                        Tambah Evaluasi</button>
+                        Tambah Video</button>
                 </div>
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -29,8 +29,8 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="keteranganvideo" class="form-label">Keterangan Video</label>
-                                        <input type="text" id="keteranganvideo" class="form-control" name="keteranganvideo"
-                                            placeholder="Masukkan Keterangan">
+                                        <input type="text" id="keteranganvideo" class="form-control"
+                                            name="keteranganvideo" placeholder="Masukkan Keterangan">
                                     </div>
                                     <div class="mb-2 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -46,7 +46,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Link Goggle Form</th>
+                                <th>Link Video Youtube</th>
                                 <th>Keterangan</th>
                                 <th>Aksi</th>
                             </tr>

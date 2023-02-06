@@ -10,6 +10,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
     <!-- icon -->
+    <link rel="shortcut icon" href="{{ asset('assets/img/books.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
@@ -34,7 +35,7 @@
                                 <p class="alert alert-danger">{{ $err }}</p>
                             @endforeach
                         @endif
-                        <form action="" method="POST">
+                        <form action="{{ route('login.action') }}" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
