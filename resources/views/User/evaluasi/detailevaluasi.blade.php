@@ -5,14 +5,14 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <p class="title">Evaluasi 1</p>
-                    <p class="subtitle">Materi Trakea</p>
+                    <p class="title">{{ $evaluasi->keterangan }}</p>
+                    <p class="subtitle">{{ $evaluasi->nama_materi }}</p>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-md-8 col-11">
                     <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSe3l9EDhTYJRqNUc0AyX4Y_RlAZ6BpbrQyFnlyHbIQJnU1SUg/viewform?embedded=true"
+                        src="{{ $evaluasi->link_soal }}"
                         width="100%" style="height:100vh;" frameborder="0">Loading…</iframe>
                 </div>
             </div>

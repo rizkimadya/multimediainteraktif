@@ -12,11 +12,11 @@
             <div class="row cardevaluasi">
                 @foreach ($evaluasi as $item)
                     <div class="col-md-3 mb-md-4 mb-3">
-                        <a href="" class="card text-white">
+                        <a href="/evaluasi/detailevaluasi/{{ $item->id }}" class="card text-white">
                             <div class="d-flex">
                                 <div>
-                                    <p class="nama">{{ $item->nama_materi }}</p>
-                                    <p class="keterangan">{{ $item->keterangan }}</p>
+                                    <p class="nama">{{ $item->keterangan }}</p>
+                                    <p class="keterangan">{{ $item->nama_materi }}</p>
                                 </div>
                                 <img src="{{ asset('assets/img/imgevaluasi.svg') }}" alt="" class="d-flex ms-auto">
                             </div>

@@ -21,36 +21,19 @@
     <div class="isimateri">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-6 mb-md-4 mb-3">
-                    <div class="card">
-                        <img src="{{ asset('assets/img/imgmateri.svg') }}" alt="" width="100%">
-                        <div class="text-center">
-                            <p class="namamateri">Materi Trakea</p>
-                            <p class="deskripsimateri">Trakea atau batang kerongkongan adalah sfj gdr fh dan.....</p>
-                            <a href="/detailmateri" class="d-flex justify-content-center">Lihat Materi <i class="bi bi-arrow-right ms-1"></i></a>
+                @foreach ($materi as $item)
+                    <div class="col-md-4 col-6 mb-md-4 mb-3">
+                        <div class="card">
+                            <img src="/storage/{{ $item->gambar }}" width="100%" alt="">
+                            <div class="text-center">
+                                <p class="namamateri">{{ $item->nama_materi }}</p>
+                                <p class="deskripsimateri">{{ Str::limit($item->isi_materi, 60) }}</p>
+                                <a href="/materi/detailmateri/{{ $item->id }}" class="d-flex justify-content-center">Lihat Materi <i
+                                        class="bi bi-arrow-right ms-1"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-6 mb-md-4 mb-3">
-                    <div class="card">
-                        <img src="{{ asset('assets/img/imgmateri.svg') }}" alt="" width="100%">
-                        <div class="text-center">
-                            <p class="namamateri">Materi Trakea</p>
-                            <p class="deskripsimateri">Trakea atau batang kerongkongan adalah sfj gdr fh dan.....</p>
-                            <a href="/detailmateri" class="d-flex justify-content-center">Lihat Materi <i class="bi bi-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-6 mb-md-4 mb-3">
-                    <div class="card">
-                        <img src="{{ asset('assets/img/imgmateri.svg') }}" alt="" width="100%">
-                        <div class="text-center">
-                            <p class="namamateri">Materi Trakea</p>
-                            <p class="deskripsimateri">Trakea atau batang kerongkongan adalah sfj gdr fh dan.....</p>
-                            <a href="/detailmateri" class="d-flex justify-content-center">Lihat Materi <i class="bi bi-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

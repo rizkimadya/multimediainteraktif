@@ -18,28 +18,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('User.beranda.beranda');
 });
-Route::get('/materi', function () {
-    return view('User.materi.materi');
-});
-Route::get('/detailmateri', function () {
-    return view('User.materi.detailmateri');
-});
-Route::get('/video', function () {
-    return view('User.video.video');
-});
-Route::get('/detailevaluasi', function () {
-    return view('User.evaluasi.detailevaluasi');
-});
-Route::get('/daftarpustaka', function () {
-    return view('User.daftarpustaka.daftarpustaka');
-});
 Route::get('/profile', function () {
     return view('User.profile.profile');
 });
 
 
+// materi
+Route::get('/materi', [UserController::class, 'indexmateri']);
+Route::get('/materi/detailmateri/{id}', [UserController::class, 'detailmateri']);
+
+
+// video
+Route::get('/video', [UserController::class, 'indexvideo']);
+
+
 // evaluasi
 Route::get('/evaluasi', [UserController::class, 'indexevaluasi']);
+Route::get('/evaluasi/detailevaluasi/{id}', [UserController::class, 'detailevaluasi']);
 
 
 // daftar pustaka

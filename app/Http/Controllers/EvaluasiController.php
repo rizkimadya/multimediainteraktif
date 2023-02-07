@@ -79,8 +79,10 @@ class EvaluasiController extends Controller
      * @param  \App\Models\Evaluasi  $evaluasi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Evaluasi $evaluasi)
+    public function destroy($id)
     {
-        //
+        $evaluasi = Evaluasi::find($id);
+        $evaluasi->delete();
+        return redirect()->route('evaluasi.index');
     }
 }

@@ -26,7 +26,7 @@
                                     <div class="mb-3">
                                         <label for="linkvideo" class="form-label">Link Video</label>
                                         <input type="text" id="linkvideo" class="form-control" name="linkvideo"
-                                            placeholder="Masukkan Link Video">
+                                            placeholder="Masukkan Link Video" value="https://www.youtube.com/embed/">
                                     </div>
                                     <div class="mb-3">
                                         <label for="keteranganvideo" class="form-label">Keterangan Video</label>
@@ -59,7 +59,8 @@
                                     <td>{{ Str::limit($item->linkvideo, 55) }}</td>
                                     <td>{{ Str::limit($item->keteranganvideo, 30) }}</td>
                                     <td class="d-flex">
-                                        <a href="Video/edit/{{ $item->id }}" class="btn btn-sm btn-success mr-2">Edit</a>
+                                        <a href="Video/edit/{{ $item->id }}"
+                                            class="btn btn-sm btn-success mr-2">Edit</a>
 
                                         <form action="Video/{{ $item->id }}" method="post">
                                             {{ method_field('DELETE') }}
