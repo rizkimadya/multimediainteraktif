@@ -20,18 +20,13 @@
     </section>
     <div class="container">
         <div class="row isi-dapus">
-            <div class="col-12 mb-4">
-                <div class="card">
-                    <p class="my-auto p-4">Mirza, F. (1997). Hubungan Remaja dan Penyimpangan Sosial. Asosiasi Psikologi Jakarta.
-                        https://lib.psijkt.ac.id/123abc..................</p>
+            @foreach ($daftarpustaka as $item)
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <p class="my-auto p-4">{{ $item->link_daftarpustaka }}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 mb-4">
-                <div class="card">
-                    <p class="my-auto p-4">Mirza, F. (1997). Hubungan Remaja dan Penyimpangan Sosial. Asosiasi Psikologi Jakarta.
-                        https://lib.psijkt.ac.id/123abc..................</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 @endsection

@@ -19,16 +19,6 @@ class DaftarPustakaController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -36,7 +26,15 @@ class DaftarPustakaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'link_daftarpustaka' => 'required'
+        ]);
+
+        $daftarpustaka = new DaftarPustaka();
+        $daftarpustaka->fill($data);
+
+        $daftarpustaka->save();
+        return redirect()->route('dapus.index');
     }
 
     /**
@@ -56,9 +54,10 @@ class DaftarPustakaController extends Controller
      * @param  \App\Models\DaftarPustaka  $daftarPustaka
      * @return \Illuminate\Http\Response
      */
-    public function edit(DaftarPustaka $daftarPustaka)
+    public function edit($id)
     {
-        //
+        $daftarpustaka = DaftarPustaka::where('id', $id)->first();
+        return view('Admin.DaftarPustaka.edit', ['daftarpustaka' => $daftarpustaka]);
     }
 
     /**
@@ -68,9 +67,13 @@ class DaftarPustakaController extends Controller
      * @param  \App\Models\DaftarPustaka  $daftarPustaka
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DaftarPustaka $daftarPustaka)
+    public function update(Request $request, $id)
     {
-        //
+        $daftarpustaka = DaftarPustaka::where('id', $id)->first();
+        $data = $request->all();
+        $daftarpustaka->fill($data);
+        $daftarpustaka->save();
+        return redirect()->route('dapus.index');
     }
 
     /**
@@ -79,8 +82,10 @@ class DaftarPustakaController extends Controller
      * @param  \App\Models\DaftarPustaka  $daftarPustaka
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DaftarPustaka $daftarPustaka)
+    public function destroy($id)
     {
-        //
+        $daftarpustaka = DaftarPustaka::find($id);
+        $daftarpustaka->delete();
+        return redirect()->route('dapus.index');
     }
 }

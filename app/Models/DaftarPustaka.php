@@ -12,7 +12,6 @@ class DaftarPustaka extends Model
     protected $table = 'daftar_pustakas';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'keterangan',
         'link_daftarpustaka'
     ];
 }

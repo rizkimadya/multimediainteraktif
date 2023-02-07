@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('daftar_pustakas', function (Blueprint $table) {
             $table->id();
-            $table->string('keterangan');
             $table->text('link_daftarpustaka');
             $table->timestamps();
         });

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,9 +27,6 @@ Route::get('/detailmateri', function () {
 Route::get('/video', function () {
     return view('User.video.video');
 });
-Route::get('/evaluasi', function () {
-    return view('User.evaluasi.evaluasi');
-});
 Route::get('/detailevaluasi', function () {
     return view('User.evaluasi.detailevaluasi');
 });
@@ -38,6 +36,14 @@ Route::get('/daftarpustaka', function () {
 Route::get('/profile', function () {
     return view('User.profile.profile');
 });
+
+
+// evaluasi
+Route::get('/evaluasi', [UserController::class, 'indexevaluasi']);
+
+
+// daftar pustaka
+Route::get('/daftarpustaka', [UserController::class, 'indexdapus']);
 
 
 // login
@@ -79,6 +85,10 @@ Route::namespace('App\Http\Controllers')->group(function () {
         Route::delete('/Admin/Evaluasi/{id}', 'EvaluasiController@destroy')->name('evaluasi.destroy');
 
         // route daftar pustaka
-        Route::get('/Admin/DaftarPustaka/index', 'DaftarPustakaController@index')->name('dapus.index');
+        Route::get('/Admin/DaftarPustaka', 'DaftarPustakaController@index')->name('dapus.index');
+        Route::post('Admin/DaftarPustaka', 'DaftarPustakaController@store');
+        Route::get('/Admin/DaftarPustaka/edit/{id}', 'DaftarPustakaController@edit')->name('dapus.edit');
+        Route::post('Admin/DaftarPustaka/update/{id}', 'DaftarPustakaController@update')->name('dapus.update');
+        Route::delete('/Admin/DaftarPustaka/{id}', 'DaftarPustakaController@destroy')->name('dapus.destroy');
     });
 });

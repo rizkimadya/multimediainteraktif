@@ -21,15 +21,15 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <form action="">
+                                <form action="/Admin/DaftarPustaka" method="POST">
+                                    @csrf
                                     <div class="mb-3">
-                                        <label for="daftarpustaka" class="form-label">Daftar Pustaka</label>
-                                        <input type="text" id="daftarpustaka" class="form-control" name="daftarpustaka"
-                                            placeholder="Masukkan Daftar Pustaka">
+                                        <label for="link_daftarpustaka" class="form-label">Daftar Pustaka</label>
+                                        <textarea name="link_daftarpustaka" id="link_daftarpustaka" rows="4" class="form-control" placeholder="Masukkan Daftar Pustaka"></textarea>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Tambahkan</button>
+                                        <button type="submit" class="btn btn-primary">Tambahkan</button>
                                     </div>
                                 </form>
                             </div>
@@ -42,18 +42,29 @@
                             <tr>
                                 <th>No</th>
                                 <th>Daftar Pustaka</th>
-                                <th>Aksi</th>
+                                <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
-                                <td class="d-flex">
-                                    <button class="btn btn-success mr-2">Edit</button>
-                                    <button class="btn btn-danger">Hapus</button>
-                                </td>
-                            </tr>
+                            @foreach ($daftarpustaka as $item)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ Str::limit($item->link_daftarpustaka, 100) }}</td>
+                                    <td class="d-flex justify-content-center">
+                                        <a href="DaftarPustaka/edit/{{ $item->id }}"
+                                            class="btn btn-sm btn-success mr-2">Edit</a>
+
+                                        <form action="DaftarPustaka/{{ $item->id }}" method="post">
+                                            {{ method_field('DELETE') }}
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                Hapus
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

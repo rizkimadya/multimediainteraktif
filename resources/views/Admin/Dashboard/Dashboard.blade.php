@@ -1,3 +1,10 @@
+<?php
+  use App\Models\DaftarPustaka;
+  use App\Models\Evaluasi;
+  use App\Models\Materi;
+  use App\Models\Video;
+?>
+
 @extends('layouts.app', ['title' => 'Dashboard'])
 
 @section('content')
@@ -7,7 +14,7 @@
                 <div class="row">
                     <div class="col">
                         <h5 class="card-title text-uppercase text-muted mb-0">Materi</h5>
-                        <span class="h2 font-weight-bold mb-0">350+</span>
+                        <span class="h2 font-weight-bold mb-0">{{ Materi::all()->count(); }}</span>
                     </div>
                     <div class="col-auto">
                         <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -25,7 +32,7 @@
                 <div class="row">
                     <div class="col">
                         <h5 class="card-title text-uppercase text-muted mb-0">Video</h5>
-                        <span class="h2 font-weight-bold mb-0">350,123+</span>
+                        <span class="h2 font-weight-bold mb-0">{{ Video::all()->count(); }}</span>
                     </div>
                     <div class="col-auto">
                         <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -43,7 +50,7 @@
                 <div class="row">
                     <div class="col">
                         <h5 class="card-title text-uppercase text-muted mb-0">Evaluasi</h5>
-                        <span class="h2 font-weight-bold mb-0">123+</span>
+                        <span class="h2 font-weight-bold mb-0">{{ Evaluasi::all()->count(); }}</span>
                     </div>
                     <div class="col-auto">
                         <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
@@ -61,7 +68,7 @@
                 <div class="row">
                     <div class="col">
                         <h5 class="card-title text-uppercase text-muted mb-0">D Pustaka</h5>
-                        <span class="h2 font-weight-bold mb-0">123,12+</span>
+                        <span class="h2 font-weight-bold mb-0">{{ DaftarPustaka::all()->count(); }}</span>
                     </div>
                     <div class="col-auto">
                         <div class="icon icon-shape bg-info text-white rounded-circle shadow">
