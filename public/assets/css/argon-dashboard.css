@@ -9251,106 +9251,6 @@ button.section-darker:focus {
     box-shadow: none !important;
 }
 
-.font-weight-300 {
-    font-weight: 300 !important;
-}
-
-.font-weight-400 {
-    font-weight: 400 !important;
-}
-
-.font-weight-500 {
-    font-weight: 500 !important;
-}
-
-.font-weight-600 {
-    font-weight: 600 !important;
-}
-
-.font-weight-700 {
-    font-weight: 700 !important;
-}
-
-.font-weight-800 {
-    font-weight: 800 !important;
-}
-
-.font-weight-900 {
-    font-weight: 900 !important;
-}
-
-.text-underline {
-    text-decoration: underline;
-}
-
-.text-through {
-    text-decoration: line-through;
-}
-
-.text-xs {
-    font-size: 0.75rem !important;
-}
-
-.text-sm {
-    font-size: 0.875rem !important;
-}
-
-.text-lg {
-    font-size: 1.25rem !important;
-}
-
-.text-xl {
-    font-size: 1.5rem !important;
-}
-
-.lh-100 {
-    line-height: 1;
-}
-
-.lh-110 {
-    line-height: 1.1;
-}
-
-.lh-120 {
-    line-height: 1.2;
-}
-
-.lh-130 {
-    line-height: 1.3;
-}
-
-.lh-140 {
-    line-height: 1.4;
-}
-
-.lh-150 {
-    line-height: 1.5;
-}
-
-.lh-160 {
-    line-height: 1.6;
-}
-
-.lh-170 {
-    line-height: 1.7;
-}
-
-.lh-180 {
-    line-height: 1.8;
-}
-
-.ls-1 {
-    letter-spacing: 0.0625rem;
-}
-
-.ls-15 {
-    letter-spacing: 0.09375rem;
-}
-
-.ls-2 {
-    letter-spacing: 0.125rem;
-}
-
 .text-blue {
     color: #5e72e4 !important;
 }
@@ -12063,23 +11963,6 @@ a.btn-icon-only {
     }
 }
 
-.page-item.active .page-link {
-    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-}
-
-.page-item .page-link,
-.page-item span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0 3px;
-    border-radius: 50% !important;
-    width: 36px;
-    height: 36px;
-    font-size: 0.875rem;
-}
-
 .table thead th {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -12130,22 +12013,6 @@ a.btn-icon-only {
     }
 }
 
-.table-flush td,
-.table-flush th {
-    border-left: 0;
-    border-right: 0;
-}
-
-.table-flush tbody tr:first-child td,
-.table-flush tbody tr:first-child th {
-    border-top: 0;
-}
-
-.table-flush tbody tr:last-child td,
-.table-flush tbody tr:last-child th {
-    border-bottom: 0;
-}
-
 .card .table {
     margin-bottom: 0;
 }
@@ -12162,61 +12029,10 @@ p {
     line-height: 1.7;
 }
 
-.lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-    line-height: 1.7;
-    margin-top: 1.5rem;
-}
-
-.lead + .btn-wrapper {
-    margin-top: 3rem;
-}
-
 .description {
     font-size: 0.875rem;
 }
 
-.heading {
-    letter-spacing: 0.025em;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.heading-small {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-}
-
-.heading-title {
-    letter-spacing: 0.025em;
-    font-size: 1.375rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.heading-section {
-    letter-spacing: 0.025em;
-    font-size: 1.375rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.heading-section img {
-    display: block;
-    width: 72px;
-    height: 72px;
-    margin-bottom: 1.5rem;
-}
-
-.heading-section.text-center img {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .display-1 span,
 .display-2 span,
@@ -12225,8 +12041,6 @@ p {
     display: block;
     font-weight: 300;
 }
-
-
 
 
 @keyframes progress-bar-stripes {
