@@ -15,14 +15,14 @@ class LoginController extends Controller
     public function login_action(Request $request)
     {
         $request->validate([
-            'username' => 'required',
+            'nipguru' => 'required',
             'password' => 'required'
         ]);
-        if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
+        if (Auth::attempt(['nipguru' => $request->nipguru, 'password' => $request->password])) {
             return view('Admin.Dashboard.dashboard')->with('users', $request);
         }
         return back()->withErrors([
-            'password' => 'Username atau Password anda salah'
+            'password' => 'Nip atau Password anda salah'
         ]);
     }
 

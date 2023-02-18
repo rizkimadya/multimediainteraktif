@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -85,5 +86,12 @@ Route::namespace('App\Http\Controllers')->group(function () {
         Route::get('/Admin/DaftarPustaka/edit/{id}', 'DaftarPustakaController@edit')->name('dapus.edit');
         Route::post('Admin/DaftarPustaka/update/{id}', 'DaftarPustakaController@update')->name('dapus.update');
         Route::delete('/Admin/DaftarPustaka/{id}', 'DaftarPustakaController@destroy')->name('dapus.destroy');
+
+        // data login
+        Route::get('/dataguru', 'GuruController@index')->name('dataguru.index');
+        Route::post('/dataguru', 'GuruController@store');
+        Route::get('/dataguru/edit/{id}', 'GuruController@edit')->name('dataguru.edit');
+        Route::post('/dataguru/update/{id}', 'GuruController@update')->name('dataguru.update');
+        Route::delete('/dataguru/{id}', 'GuruController@destroy')->name('dataguru.destroy');
     });
 });

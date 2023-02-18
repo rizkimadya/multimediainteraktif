@@ -38,9 +38,9 @@
                         <form action="{{ route('login.action') }}" method="POST">
                             @csrf
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username</label>
-                                <input type="text" name="username" id="username"
-                                    class="border-0 py-3 ps-4 form-control" placeholder="Masukkan Username">
+                                <label for="nipguru" class="form-label">NIP</label>
+                                <input type="text" name="nipguru" id="nipguru"
+                                    class="border-0 py-3 ps-4 form-control" placeholder="Masukkan NIP Anda">
                             </div>
                             <label for="pass" class="form-label">Password</label>
                             <div class="input-group mb-3">

@@ -18,8 +18,9 @@ class AdminSeeder extends Seeder
     {
         User::truncate();
         User::create([
-            'username' => 'admin',
+            'nipguru' => 'admin',
             'password' => bcrypt('admin'),
+            'roles' => 'admin',
             'remember_token' => Str::random(60)
         ]);
     }
