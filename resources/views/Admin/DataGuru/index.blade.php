@@ -5,7 +5,7 @@
         <div class="col-12">
             <div class="card p-4">
                 <div>
-                    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         <i class="ni ni-fat-add align-self-center mr-1"></i>
                         Tambah Data</button>
                 </div>
@@ -40,7 +40,7 @@
                                     </div>
                                     <div class="mb-2 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                        <button type="submit" class="btn btn-success">Tambahkan</button>
+                                        <button type="submit" class="btn btn-primary">Tambahkan</button>
                                     </div>
                                 </form>
                             </div>
@@ -65,7 +65,7 @@
                                     <td>{{ $item->namaguru }}</td>
                                     <td class="d-flex justify-content-center">
                                         <a href="dataguru/edit/{{ $item->id }}"
-                                            class="btn btn-sm btn-primary mr-2">Edit</a>
+                                            class="btn btn-sm btn-success mr-2">Edit</a>
 
                                         <form action="dataguru/{{ $item->id }}" method="post">
                                             {{ method_field('DELETE') }}

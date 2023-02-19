@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Evaluasi;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\Eval_;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class EvaluasiController extends Controller
 {
@@ -38,6 +39,7 @@ class EvaluasiController extends Controller
         $evaluasi = new Evaluasi();
         $evaluasi->fill($data);
         $evaluasi->save();
+        Alert::success('Sukses', 'Data Berhasil Ditambah');
         return redirect()->route('evaluasi.index');
     }
 
@@ -70,6 +72,7 @@ class EvaluasiController extends Controller
 
         $data = $evaluasi;
         $data->update();
+        Alert::success('Sukses', 'Data Berhasil Diupdate');
         return redirect()->route('evaluasi.index');
     }
 
@@ -83,6 +86,7 @@ class EvaluasiController extends Controller
     {
         $evaluasi = Evaluasi::find($id);
         $evaluasi->delete();
+        Alert::success('Sukses', 'Data Berhasil Dihapus');
         return redirect()->route('evaluasi.index');
     }
 }

@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class GuruController extends Controller
 {
@@ -27,6 +28,7 @@ class GuruController extends Controller
         $dataguru = $user;
 
         $dataguru->save();
+        Alert::success('Sukses', 'Data Berhasil Ditambah');
         return redirect()->route('dataguru.index');
     }
 
@@ -48,6 +50,7 @@ class GuruController extends Controller
         $dataguru = $user;
 
         $dataguru->update();
+        Alert::success('Sukses', 'Data Berhasil Diupdate');
         return redirect()->route('dataguru.index');
     }
 
@@ -55,6 +58,7 @@ class GuruController extends Controller
     {
         $dataguru = User::where('id', $id);
         $dataguru->delete();
+        Alert::success('Sukses', 'Data Berhasil Dihapus');
         return redirect()->route('dataguru.index');
     }
 }

@@ -6,6 +6,7 @@ use App\Models\Materi;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MateriController extends Controller
 {
@@ -54,6 +55,7 @@ class MateriController extends Controller
         $materi->gambar = Str::of($path)->replace('public', 'storage')->toString();
 
         $materi->save();
+        Alert::success('Sukses', 'Data Berhasil Ditambah');
         return redirect()->route('materi.index')->with('status', 'Data Berhasil Ditambah');
     }
 
@@ -108,6 +110,7 @@ class MateriController extends Controller
 
             $materi->save();
         }
+        Alert::success('Sukses', 'Data Berhasil Diupdate');
         return redirect()->route('materi.index')->with('status', 'Data Berhasil Diupdate');
     }
 
@@ -122,6 +125,7 @@ class MateriController extends Controller
         $materi = Materi::find($id);
         Storage::delete(Str::of($materi->gambar)->replace('storage', 'public')->toString());
         $materi->delete();
+        Alert::success('Sukses', 'Data Berhasil Dihapus');
         return redirect()->route('materi.index');
     }
 }

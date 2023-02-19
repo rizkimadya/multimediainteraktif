@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DaftarPustaka;
 use Illuminate\Http\Request;
+use App\Models\DaftarPustaka;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DaftarPustakaController extends Controller
 {
@@ -34,6 +35,7 @@ class DaftarPustakaController extends Controller
         $daftarpustaka->fill($data);
 
         $daftarpustaka->save();
+        Alert::success('Sukses', 'Data Berhasil Ditambah');
         return redirect()->route('dapus.index');
     }
 
@@ -73,6 +75,7 @@ class DaftarPustakaController extends Controller
         $data = $request->all();
         $daftarpustaka->fill($data);
         $daftarpustaka->save();
+        Alert::success('Sukses', 'Data Berhasil Diupdate');
         return redirect()->route('dapus.index');
     }
 
@@ -86,6 +89,7 @@ class DaftarPustakaController extends Controller
     {
         $daftarpustaka = DaftarPustaka::find($id);
         $daftarpustaka->delete();
+        Alert::success('Sukses', 'Data Berhasil Dihapus');
         return redirect()->route('dapus.index');
     }
 }
