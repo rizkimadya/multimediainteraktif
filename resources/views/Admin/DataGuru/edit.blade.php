@@ -21,7 +21,7 @@
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" name="password" id="password" class="form-control"
-                                    placeholder="Masukkan Password baru" />
+                                    placeholder="Masukkan Password baru/Konfirmasi Ulang Password" required/>
                             </div>
                         </div>
                     </div>

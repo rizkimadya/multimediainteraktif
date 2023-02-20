@@ -12,20 +12,20 @@
                             <div class="mb-3">
                                 <label for="nama_materi" class="form-label">Judul Materi</label>
                                 <input type="text" name="nama_materi" id="nama_materi" class="form-control"
-                                    placeholder="Masukkan Judul Materi">
+                                    placeholder="Masukkan Judul Materi" required />
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="gambar" class="form-label">Gambar</label>
                                 <input type="file" name="gambar" id="gambar" class="form-control"
-                                    placeholder="Masukkan Judul Materi">
+                                    placeholder="Masukkan Judul Materi" required />
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="mb-3">
                                 <label for="isi_materi" class="form-label">Isi Materi</label>
-                                <textarea name="isi_materi" id="isi_materi" rows="10" class="form-control"></textarea>
+                                <textarea name="isi_materi" id="isi_materi" rows="10" class="form-control" required></textarea>
                             </div>
                             <div class="d-flex justify-content-end">
                                 <a href="{{ route('materi.index') }}" class="btn btn-danger">Batal</a>

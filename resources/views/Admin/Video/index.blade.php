@@ -26,12 +26,13 @@
                                     <div class="mb-3">
                                         <label for="linkvideo" class="form-label">Link Video</label>
                                         <input type="text" id="linkvideo" class="form-control" name="linkvideo"
-                                            placeholder="Masukkan Link Video" value="https://www.youtube.com/embed/">
+                                            placeholder="Masukkan Link Video" value="https://www.youtube.com/embed/"
+                                            required />
                                     </div>
                                     <div class="mb-3">
                                         <label for="keteranganvideo" class="form-label">Keterangan Video</label>
                                         <input type="text" id="keteranganvideo" class="form-control"
-                                            name="keteranganvideo" placeholder="Masukkan Keterangan">
+                                            name="keteranganvideo" placeholder="Masukkan Keterangan" required />
                                     </div>
                                     <div class="mb-2 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

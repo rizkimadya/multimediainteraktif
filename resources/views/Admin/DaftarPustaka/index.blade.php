@@ -25,7 +25,7 @@
                                     @csrf
                                     <div class="mb-3">
                                         <label for="link_daftarpustaka" class="form-label">Daftar Pustaka</label>
-                                        <textarea name="link_daftarpustaka" id="link_daftarpustaka" rows="4" class="form-control" placeholder="Masukkan Daftar Pustaka"></textarea>
+                                        <textarea name="link_daftarpustaka" id="link_daftarpustaka" rows="4" class="form-control" placeholder="Masukkan Daftar Pustaka" required></textarea>
                                     </div>
                                     <div class="mb-2 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
