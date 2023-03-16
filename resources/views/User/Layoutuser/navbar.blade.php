@@ -26,9 +26,9 @@
                     <a class="{{ ($title == 'Evaluasi' ? 'active' : '' || $title == 'Detail Evaluasi') ? 'active' : '' }}"
                         href="/evaluasi">Evaluasi</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="{{ $title == 'Daftar Pustaka' ? 'active' : '' }}" href="/daftarpustaka">Daftar Pustaka</a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="{{ $title == 'Profile' ? 'active' : '' }}" href="/profile">Profile</a>
                 </li>

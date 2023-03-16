@@ -16,7 +16,7 @@
                             <div class="d-flex">
                                 <div>
                                     <p class="nama">{{ $item->keterangan }}</p>
-                                    <p class="keterangan">{{ $item->nama_materi }}</p>
+                                    <p class="keterangan">{{ Str::limit($item->nama_materi, 16) }}</p>
                                 </div>
                                 <img src="{{ asset('assets/img/imgevaluasi.svg') }}" alt="" class="d-flex ms-auto">
                             </div>

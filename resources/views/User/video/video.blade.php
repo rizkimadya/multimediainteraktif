@@ -12,10 +12,12 @@
                     <p class="subtitle">Memang baik merayakan kesuksesan, tapi hal yang lebih penting adalah untuk mengambil
                         pelajaran dari kegagalan dan Jangan malas untuk belajar karena ilmu adalah harta yang bisa kita bawa
                         ke mana pun tanpa membebani kita.</p>
-                    <div id="search" class="d-flex">
-                        <input type="text" placeholder="Cari Video Pembelajaran">
-                        <a href="#" class="bi bi-search align-self-center ms-2"></a>
-                    </div>
+                    <form action="" method="get">
+                        <div id="search" class="d-flex">
+                            <input type="text" name="search" placeholder="Cari Video Pembelajaran">
+                            <button type="submit" class="bi bi-search align-self-center ms-2 border-0"></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -29,8 +31,7 @@
             @foreach ($video as $item)
                 <div class="col-6 mb-4">
                     <div class="card">
-                        <iframe width="100%" src="{{ $item->linkvideo }}"
-                            title="YouTube video player" frameborder="0"
+                        <iframe width="100%" src="{{ $item->linkvideo }}" title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>

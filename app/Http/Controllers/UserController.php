@@ -28,22 +28,24 @@ class UserController extends Controller
         return view('User.evaluasi.detailevaluasi', ['evaluasi' => $evaluasi]);
     }
 
-    public function indexvideo()
+    public function indexvideo(Request $request)
     {
-        $video = Video::orderBy('created_at', 'desc')->get();
+        $search = $request->search;
+        $video = Video::where('keteranganvideo', 'LIKE', '%' . $search . '%')->get();
         return view('User.video.video', ['video' => $video]);
     }
 
-    public function indexmateri()
+    public function indexmateri(Request $request)
     {
-        $materi = Materi::orderBy('created_at', 'desc')->get();
+        $search = $request->search;
+        $materi = Materi::where('nama_materi', 'LIKE', '%' . $search . '%')->get();
         return view('User.materi.materi', ['materi' => $materi]);
     }
 
     public function detailmateri($id)
     {
         $materi = Materi::find($id);
-        $materilain = Materi::orderBy('created_at', 'desc')->get();
+        $materilain = Materi::all();
         return view('User.materi.detailmateri', compact('materi', 'materilain'));
     }
 }
