@@ -15,7 +15,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama Materi</th>
-                                <th>Deskripsi</th>
+                                {{-- <th>Deskripsi</th> --}}
                                 <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
@@ -24,7 +24,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->nama_materi }}</td>
-                                    <td>{{ Str::limit($item->isi_materi, 70) }}</td>
+                                    {{-- <td>{{ Str::limit($item->isi_materi, 70) }}</td> --}}
                                     <td class="d-flex justify-content-center">
                                         <a href="Materi/show/{{ $item->id }}" class="btn btn-sm btn-info mr-2">Lihat</a>
                                         <a href="Materi/edit/{{ $item->id }}" class="btn btn-sm btn-success mr-2">Edit</a>

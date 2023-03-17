@@ -29,7 +29,7 @@
                             <img src="/storage/{{ $item->gambar }}" width="100%" alt="">
                             <div class="text-center">
                                 <p class="namamateri">{{ $item->nama_materi }}</p>
-                                <p class="deskripsimateri">{{ Str::limit($item->isi_materi, 60) }}</p>
+                                {{-- <p class="deskripsimateri">{!! html_entity_decode($item->isi_materi) !!}</p> --}}
                                 <a href="/materi/detailmateri/{{ $item->id }}"
                                     class="d-flex justify-content-center">Lihat Materi <i
                                         class="bi bi-arrow-right ms-1"></i></a>

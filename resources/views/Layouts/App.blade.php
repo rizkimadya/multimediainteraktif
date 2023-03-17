@@ -42,7 +42,14 @@
         </div>
     </div>
 
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
+    <script type="text/javascript">
+        CKEDITOR.replace('isi_materi', {
+            filebrowserUploadUrl: "{{ route('materi.store', ['_token' => csrf_token()]) }}",
+            filebrowserUploadMethod: 'form'
+        });
+    </script>
 
     <!--   Core   -->
     <script src="{{ asset('assets/js/plugins/jquery/dist/jquery.min.js') }}"></script>
@@ -56,3 +63,5 @@
 </body>
 
 </html>
+
+{{-- https://www.positronx.io/how-to-install-integrate-ckeditor-in-laravel/ --}}
