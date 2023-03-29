@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand" href="/">
-            Multimedia <span>Interaktif</span>
+            <span>LARING</span>
             <p class="mb-0">
-                Pembelajaran materi sistem pernapasan
+                Landskap Pembelajaran Daring
             </p>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

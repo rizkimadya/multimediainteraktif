@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <p class="title">Multimedia Interaktif</p>
+                    <p class="title">Landskap Pembelajaran Daring</p>
                     <p class="isi">Pengembangan multimedia interaktif berbasis web pada pembelajaran biologi materi
                         sistem
                         pernapasan siswa kelas XI MA Aisyiyah Sungguminasa</p>
@@ -52,6 +52,6 @@
             </div>
         </div>
         <hr style="color:#fff;">
-        <p class="text-white text-center copyright">Multimedia Interaktif | Januari 2023</p>
+        <p class="text-white text-center copyright">Laring | Januari 2023</p>
     </div>
 </footer>

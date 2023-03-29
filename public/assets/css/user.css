@@ -15,7 +15,7 @@
     color: #1ccde1;
 }
 .navbar-brand span {
-    color: #B21A27;
+    color: #b21a27;
 }
 .navbar-brand p {
     font-size: 14px;
@@ -33,13 +33,13 @@
 }
 .navbar ul li a:hover {
     transition: all ease-in-out 0.3s;
-    color: #B21A27;
+    color: #b21a27;
 }
 .navbar ul li a.active {
-    color: #B21A27;
+    color: #b21a27;
 }
 footer {
-    background-color: #F05562;
+    background-color: #f05562;
     padding: 50px 0px 30px 0px;
 }
 footer .card {
@@ -76,7 +76,7 @@ footer .isi a {
     margin-top: 5%;
 }
 #beranda .hero .title {
-    color: #434343;
+    color: #b21a27;
     font-size: 42px;
     line-height: 56px;
     font-weight: 600;
@@ -137,10 +137,21 @@ footer .isi a {
 #profile {
     padding: 60px 0px 100px 0px;
 }
-#profile .biodata p {
-    font-size: 20px;
-    color: #75808e;
+#profile .biodata .keterangan {
+    font-size: 30px;
+    text-align: center;
     font-weight: 600;
+}
+#profile .biodata img{
+border-radius:8px;
+}
+#profile .biodata .nama {
+    font-size: 18px;
+    font-weight:500;
+}
+#profile .biodata .isi {
+    font-size: 16px;
+    text-align: justify;
 }
 #profile .btn-contact {
     font-size: 18px;
@@ -428,7 +439,7 @@ footer .isi a {
         color: #1ccde1;
     }
     .navbar-brand span {
-        color: #B21A27;
+        color: #b21a27;
     }
     .navbar-brand p {
         font-size: 12px;
@@ -443,7 +454,7 @@ footer .isi a {
         font-size: 12px;
     }
     footer {
-        background-color: #B21A27;
+        background-color: #b21a27;
         padding: 30px 0px 30px 0px;
     }
     footer .title {
@@ -518,10 +529,7 @@ footer .isi a {
         font-size: 14px;
         font-weight: 500;
     }
-    #profile .biodata img {
-        border-radius: 50%;
-        padding: 0px 100px;
-    }
+
     #profile .btn-contact {
         font-size: 14px;
         color: #fff;

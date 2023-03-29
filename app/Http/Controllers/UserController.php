@@ -18,7 +18,7 @@ class UserController extends Controller
 
     public function indexevaluasi()
     {
-        $evaluasi = Evaluasi::orderBy('created_at', 'desc')->get();
+        $evaluasi = Evaluasi::all();
         return view('User.evaluasi.evaluasi', ['evaluasi' => $evaluasi]);
     }
 

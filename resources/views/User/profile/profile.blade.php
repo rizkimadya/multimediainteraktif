@@ -4,30 +4,37 @@
     <section id="profile">
         <div class="container">
             <div class="row biodata">
-                <div class="col-md-5 mb-4">
-                    <img src="{{ asset('assets/img/imgprofile.svg') }}" alt="" width="100%">
+                <div class="col-12">
+                    <p class="keterangan">Biografi Penulis</p>
                 </div>
-                <div class="col-md-7 mb-4 align-self-center">
-                    <div class="row ps-md-5">
-                        <div class="col-md-3 col-4">
-                            <p>Nama</p>
-                            <p>Jurusan</p>
-                            <p>Fakultas</p>
-                            <p>Universitas</p>
-                            <p>Judul Skripsi</p>
-                        </div>
-                        <div class="col-md-9 col-8">
-                            <p>: Nur Aulia</p>
-                            <p>: Pendidikan Biologi</p>
-                            <p>: Tarbiyah dan Keguruan</p>
-                            <p>: UIN Alauddin Makassar</p>
-                            <p>: Pengembangan multimedia interaktif
-                                berbasis web pada pembelajaran biologi
-                                materi sistem pernapasan siswa kelas XI
-                                MA Aisyiyah Sungguminasa</p>
-                        </div>
-                        <div class="col-12 mt-md-5 mt-3">
-                            <a href="#" class="btn btn-contact">Kontak Saya <i class="bi bi-whatsapp ms-2"></i></a>
+                <div class="col-12">
+                    <div class="card p-3">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card p-3 mb-md-0 mb-3">
+                                    <img src="{{ asset('assets/img/profile.jpeg') }}" alt="" width="100%">
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="nama">Nur Aulia Darmayanti</p>
+                                <p class="isi"> Lahir di soppeng pada tanggal 22 agustus 2001 adalah mahasiswa dari
+                                    pendidikan
+                                    tinggi Universitas Islam Negeri Alauddin Makassar dengan program studi Pendidikan
+                                    Biologi,
+                                    fakultas Tarbiyah dan Keguruan.
+                                    Anak pertama dari dua bersaudara hasil buah kasih dari pasangan Sudarman dan Asrianti
+                                    Santri.
+                                    Pendidikan Formal dimulai dari TK masita di soppeng, kemudian melanjutkan pendidikan di
+                                    SDN
+                                    Minasa Upa Makassar dan lulus pada tahun 2013. Pada tahun yang sama, ia melanjutkan
+                                    pendidikan
+                                    di SMPN 40 Makassar dan lulus pada tahun 2016 dan pada tahun yang sama pula ia
+                                    melanjutkan
+                                    pendidikan di MAN 1 makassar dan lulus pada tahun 2019. Pada tahun 2019 dia melanjutkan
+                                    pendidikan tinggi di Universitas Islam Negeri Alauddin Makassar dengan Program Studi
+                                    Pendidikan
+                                    Biologi, Fakultas Tarbiyah.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
