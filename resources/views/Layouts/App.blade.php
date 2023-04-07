@@ -42,11 +42,12 @@
         </div>
     </div>
 
-    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
 
     <script type="text/javascript">
         CKEDITOR.replace('isi_materi', {
-            filebrowserUploadUrl: "{{ route('materi.store', ['_token' => csrf_token()]) }}",
+            filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form'
         });
     </script>

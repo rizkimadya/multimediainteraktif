@@ -12,7 +12,8 @@
                     <form action="" method="GET">
                         <div id="search" class="d-flex justify-content-center mt-4">
                             <input type="text" name="search" placeholder="Cari Materi Pembelajaran ...">
-                            <button type="submit" id="search" class="bi bi-search align-self-center ms-2 border-0"></button>
+                            <button type="submit" id="search"
+                                class="bi bi-search align-self-center ms-2 border-0"></button>
                         </div>
                     </form>
                 </div>

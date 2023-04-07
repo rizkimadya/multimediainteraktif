@@ -65,6 +65,8 @@ Route::namespace('App\Http\Controllers')->group(function () {
         Route::post('/Admin/Materi/update/{id}', 'MateriController@update')->name('materi.update');
         Route::delete('/Admin/Materi/{id}', 'MateriController@destroy')->name('materi.destroy');
 
+        Route::post('upload-image', 'MateriController@uploadImage')->name('upload');
+
 
         // route video
         Route::get('/Admin/Video', 'VideoController@index')->name('video.index');
