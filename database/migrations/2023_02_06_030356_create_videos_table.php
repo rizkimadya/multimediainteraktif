@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
             $table->string('linkvideo');
-            $table->string('keteranganvideo');
+            $table->text('playlistbaru')->nullable();
+            $table->text('playlistlama')->nullable();
+            $table->text('namamateri')->nullable();
             $table->timestamps();
         });
     }

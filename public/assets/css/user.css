@@ -142,12 +142,12 @@ footer .isi a {
     text-align: center;
     font-weight: 600;
 }
-#profile .biodata img{
-border-radius:8px;
+#profile .biodata img {
+    border-radius: 8px;
 }
 #profile .biodata .nama {
     font-size: 18px;
-    font-weight:500;
+    font-weight: 500;
 }
 #profile .biodata .isi {
     font-size: 16px;
@@ -271,7 +271,17 @@ border-radius:8px;
     font-weight: 400;
 }
 .isi-video .card {
-    border: 8px solid #1ccde1;
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    border: none;
+    padding: 14px 20px;
+    background: linear-gradient(
+        96.44deg,
+        #6772e5 3.31%,
+        #2ba4fb 50.56%,
+        #22e9ff 97.46%
+    );
 }
 .isi-video .card iframe {
     height: 315px;

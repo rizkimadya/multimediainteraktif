@@ -31,6 +31,7 @@ Route::get('/materi/detailmateri/{id}', [UserController::class, 'detailmateri'])
 
 // video
 Route::get('/video', [UserController::class, 'indexvideo']);
+Route::get('/video/{playlistbaru}', [UserController::class, 'detailvideo'])->name('detail.video');
 
 
 // evaluasi

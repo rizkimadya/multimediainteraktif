@@ -15,9 +15,9 @@
                                     placeholder="Masukkan Link Video" value="{{ $video->linkvideo }}">
                             </div>
                             <div class="mb-3">
-                                <label for="keteranganvideo" class="form-label">Keterangan Video</label>
-                                <input type="text" id="keteranganvideo" class="form-control" name="keteranganvideo"
-                                    placeholder="Masukkan Keterangan" value="{{ $video->keteranganvideo }}">
+                                <label for="namamateri" class="form-label">Nama Video</label>
+                                <input type="text" id="namamateri" class="form-control" name="namamateri"
+                                    placeholder="Masukkan Nama Materi Yang dibahas" value="{{ $video->namamateri }}" />
                             </div>
                             <div class="mb-2 d-flex justify-content-end">
                                 <a href="{{ route('video.index') }}" type="button" class="btn btn-danger">Kembali</a>

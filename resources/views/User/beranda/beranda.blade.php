@@ -6,7 +6,7 @@
             <div class="row hero">
                 <div class="col-md-6 align-self-center order-md-1 order-2">
                     <p class="title"><span>Sistem</span> Pernapasan
-                    <p class="subtitle">Sistem Pernapasan adalah sekumpulan organ yang terlibat dalam proses pertukaran oksigen dan karbon dioksida dalam darah.
+                    <p class="subtitle">Sistem Pernapasan adalah sekumpulan organ yang terlibat dalam proses pertukaran oksigen dan karbondioksida dalam darah.
                     </p>
                     <div class="d-inline-block">
                         <a href="#cardmateri" class="btn btn-mulai d-flex">Mulai Belajar <i class="bi bi-book ms-2"></i></a>

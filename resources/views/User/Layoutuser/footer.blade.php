@@ -16,11 +16,11 @@
                         <a href="http://ma-aisyiyah.mysch.id/" class="d-flex" target="_blank">
                             <i class="bi bi-globe me-2 align-self-center"></i>http://ma-aisyiyah.mysch.id/
                         </a>
-                        <a href="" class="d-flex">
-                            <i class="bi bi-envelope me-2 align-self-center"></i>syahriljie20@yahoo.com
+                        <a href="#" class="d-flex">
+                            <i class="bi bi-envelope me-2 align-self-center"></i>pendidikan.biologi@uin-alauddin.ac.id
                         </a>
-                        <a href="" class="d-flex">
-                            <i class="bi bi-whatsapp me-2 align-self-center"></i>085299890627
+                        <a href="#" class="d-flex">
+                            <i class="bi bi-whatsapp me-2 align-self-center"></i>+62 812-4319-9855
                         </a>
                     </div>
                 </div>
@@ -40,9 +40,6 @@
                         </a>
                         <a href="/evaluasi" class="d-flex">
                             <i class="bi bi-chat-text me-2 align-self-center"></i>Evaluasi
-                        </a>
-                        <a href="/daftarpustaka" class="d-flex">
-                            <i class="bi bi-journal-bookmark-fill me-2 align-self-center"></i>Daftar Pustaka
                         </a>
                         <a href="/profile" class="d-flex">
                             <i class="bi bi-person-fill me-2 align-self-center"></i>Profile

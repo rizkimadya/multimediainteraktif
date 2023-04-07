@@ -31,8 +31,14 @@ class UserController extends Controller
     public function indexvideo(Request $request)
     {
         $search = $request->search;
-        $video = Video::where('keteranganvideo', 'LIKE', '%' . $search . '%')->get();
+        $video = Video::where('playlistbaru', 'LIKE', '%' . $search . '%')->get();
         return view('User.video.video', ['video' => $video]);
+    }
+    public function detailvideo($playlistbaru)
+    {
+        $video = Video::find($playlistbaru);
+        $videodetail = Video::where('playlistbaru', '=', $playlistbaru)->orWhere('playlistlama', '=', $playlistbaru)->get();
+        return view('User.video.detailvideo', compact('video', 'videodetail'));
     }
 
     public function indexmateri(Request $request)

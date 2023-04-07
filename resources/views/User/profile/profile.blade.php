@@ -17,23 +17,16 @@
                             </div>
                             <div class="col-md-9">
                                 <p class="nama">Nur Aulia Darmayanti</p>
-                                <p class="isi"> Lahir di soppeng pada tanggal 22 agustus 2001 adalah mahasiswa dari
-                                    pendidikan
-                                    tinggi Universitas Islam Negeri Alauddin Makassar dengan program studi Pendidikan
-                                    Biologi,
-                                    fakultas Tarbiyah dan Keguruan.
+                                <p class="isi"> Lahir di Soppeng pada tanggal 22 Agustus 2001 adalah mahasiswi dari
+                                    pendidikan tinggi Universitas Islam Negeri Alauddin Makassar dengan Prodi Pendidikan
+                                    Biologi, Fakultas Tarbiyah dan Keguruan.
                                     Anak pertama dari dua bersaudara hasil buah kasih dari pasangan Sudarman dan Asrianti
-                                    Santri.
-                                    Pendidikan Formal dimulai dari TK masita di soppeng, kemudian melanjutkan pendidikan di
-                                    SDN
-                                    Minasa Upa Makassar dan lulus pada tahun 2013. Pada tahun yang sama, ia melanjutkan
-                                    pendidikan
-                                    di SMPN 40 Makassar dan lulus pada tahun 2016 dan pada tahun yang sama pula ia
-                                    melanjutkan
-                                    pendidikan di MAN 1 makassar dan lulus pada tahun 2019. Pada tahun 2019 dia melanjutkan
-                                    pendidikan tinggi di Universitas Islam Negeri Alauddin Makassar dengan Program Studi
-                                    Pendidikan
-                                    Biologi, Fakultas Tarbiyah.</p>
+                                    Santri. Pendidikan formal dimulai dari TK Masita di Soppeng, kemudian melanjutkan
+                                    pendidikan di SDN Minasa Upa Makassar dan lulus pada tahun 2013. Pada tahun yang sama,
+                                    ia melanjutkan pendidikan di SMPN 40 Makassar dan lulus pada tahun 2016 dan pada tahun
+                                    yang sama pula ia melanjutkan pendidikan di MAN 1 Makassar dan lulus pada tahun 2019.
+                                    Pada tahun 2019 dia melanjutkan pendidikan tinggi di Universitas Islam Negeri Alauddin
+                                    Makassar dengan Prodi Pendidikan Biologi, Fakultas Tarbiyah dan Keguruan.</p>
                             </div>
                         </div>
                     </div>

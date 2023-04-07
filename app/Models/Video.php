@@ -13,6 +13,8 @@ class Video extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'linkvideo',
-        'keteranganvideo'
+        'playlistbaru',
+        'playlistlama',
+        'namamateri'
     ];
 }

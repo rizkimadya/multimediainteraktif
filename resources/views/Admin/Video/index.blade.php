@@ -30,9 +30,26 @@
                                             required />
                                     </div>
                                     <div class="mb-3">
-                                        <label for="keteranganvideo" class="form-label">Keterangan Video</label>
-                                        <input type="text" id="keteranganvideo" class="form-control"
-                                            name="keteranganvideo" placeholder="Masukkan Keterangan" required />
+                                        <label for="playlistbaru" class="form-label">Tambah Playlist</label>
+                                        <input type="text" id="playlistbaru" class="form-control" name="playlistbaru"
+                                            placeholder="Masukkan Playlist Baru" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="playlistlama" class="form-label">Playlist Lama</label>
+                                        <select class="form-control" name="playlistlama" id="playlistlama">
+                                            <option selected>Pilih Playlist Lama</option>
+                                            @foreach ($video as $item)
+                                                @if ($item->playlistbaru != null)
+                                                    <option value="{{ $item->playlistbaru }}">{{ $item->playlistbaru }}
+                                                    </option>
+                                                @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="namamateri" class="form-label">Nama Video</label>
+                                        <input type="text" id="namamateri" class="form-control" name="namamateri"
+                                            placeholder="Masukkan Nama Materi Yang dibahas" required />
                                     </div>
                                     <div class="mb-2 d-flex justify-content-end">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -49,7 +66,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Link Video Youtube</th>
-                                <th>Keterangan</th>
+                                <th>Nama Materi</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -58,7 +75,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ Str::limit($item->linkvideo, 55) }}</td>
-                                    <td>{{ Str::limit($item->keteranganvideo, 30) }}</td>
+                                    <td>{{ Str::limit($item->namamateri, 30) }}</td>
                                     <td class="d-flex">
                                         <a href="Video/edit/{{ $item->id }}"
                                             class="btn btn-sm btn-success mr-2">Edit</a>

@@ -28,11 +28,7 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'linkvideo' => 'required',
-            'keteranganvideo' => 'required'
-        ]);
-
+        $data = $request->all();
         $video = new Video();
         $video->fill($data);
         $video->save();

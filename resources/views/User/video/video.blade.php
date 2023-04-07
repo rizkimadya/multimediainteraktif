@@ -22,6 +22,7 @@
             </div>
         </div>
     </section>
+
     <div class="container isi-video">
         <div class="row">
             <div class="col-12 mb-3">
@@ -29,6 +30,15 @@
                 <p class="subtitle">Materi Sistem Pernapasan</p>
             </div>
             @foreach ($video as $item)
+                <div class="col-md-3 mb-4">
+                    <div class="card p-3">
+                        <p class="mb-3 fw-bold fs-6">{{ $item->playlistbaru }}</p>
+                        {{-- <p class="mb-2 ms-auto" style="font-size: 12px;">20 Video</p> --}}
+                        <a href="video/{{ $item->playlistbaru }}" class="btn btn-sm" style="background-color: #fff; color:#6772e5;">Lihat Video</a>
+                    </div>
+                </div>
+            @endforeach
+            {{-- @foreach ($video as $item)
                 <div class="col-6 mb-4">
                     <div class="card">
                         <iframe width="100%" src="{{ $item->linkvideo }}" title="YouTube video player" frameborder="0"
@@ -36,7 +46,7 @@
                             allowfullscreen></iframe>
                     </div>
                 </div>
-            @endforeach
+            @endforeach --}}
         </div>
     </div>
 @endsection
