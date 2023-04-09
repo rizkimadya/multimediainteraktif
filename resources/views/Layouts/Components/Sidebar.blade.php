@@ -89,7 +89,7 @@
                      </a>
                  </li>
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Data Guru' ? 'active' : '' }}"
+                     <a class="nav-link {{ $title == 'Data Guru Login' ? 'active' : '' }}"
                          href="{{ route('dataguru.index') }}" {{ auth()->user()->roles == 'user' ? 'hidden' : '' }}>
                          <i class="ni ni-single-02 mb-1 text-success"></i> Data Guru
                      </a>
